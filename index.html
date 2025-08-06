@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simgonsoft - 制作アプリ一覧</title>
+    <link rel="icon" href="res/site.png" type="image/png" />
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
     <link
       rel="stylesheet"
@@ -13,7 +14,7 @@
       .hero-section {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: white;
-        padding: 50px 0;
+        padding: 30px 0;
       }
       .app-card {
         transition: transform 0.3s;
@@ -24,9 +25,17 @@
         flex-direction: column;
         justify-content: space-between;
       }
-      .app-card .card-footer .btn {
-        flex: 0 0 calc(33.333% - 0.25rem);
-        max-width: calc(33.333% - 0.25rem);
+      .app-card .card-footer a {
+        flex: 1;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .app-card .card-footer img {
+        height: 40px;
+        max-width: 100%;
+        object-fit: contain;
       }
       .footer {
         background-color: #343a40;
@@ -48,7 +57,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <!-- ルートメモ -->
-          <div class="col-lg-4 col-md-5 col-sm-8 mb-4">
+          <div class="col-lg-4 col-md-6 col-sm-8 mb-4">
             <div class="card app-card h-100 shadow">
               <img
                 src="res/routememo.png"
@@ -62,7 +71,7 @@
                   <span class="badge bg-warning">2025年</span>
                 </div>
                 <p class="card-text">
-                  移動ルートをメモとして記録・保存できるシンプルなアプリ。日常の移動や旅行の記録に最適。
+                  散歩道、ジョギングコース等のルートを地図上に記録・管理できるアプリ。
                 </p>
                 <div class="mb-3">
                   <span class="badge bg-primary me-1">Swift</span>
@@ -71,23 +80,35 @@
                 </div>
               </div>
               <div class="card-footer">
-                <div class="d-flex flex-wrap gap-1 justify-content-start">
+                <div class="d-flex flex-nowrap gap-1 justify-content-start">
                   <a
                     href="https://apps.apple.com/us/app/%E3%83%AB%E3%83%BC%E3%83%88%E3%83%A1%E3%83%A2/id6748929031"
-                    class="btn btn-primary btn-sm"
                     target="_blank"
-                    ><i class="bi bi-apple"></i> App Store</a
+                    ><img src="res/app_store.png" alt="App Store"
+                  /></a>
+                  <div
+                    style="
+                      flex: 1;
+                      text-align: center;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    "
                   >
-                  <a href="#" class="btn btn-outline-secondary btn-sm disabled"
-                    ><i class="bi bi-google-play"></i> 準備中</a
-                  >
+                    <img
+                      src="res/google_play.png"
+                      alt="Google Play 準備中"
+                      style="opacity: 0.5; height: 40px; max-width: 100%; object-fit: contain"
+                    />
+                  </div>
+                  <div style="flex: 1"></div>
                 </div>
               </div>
             </div>
           </div>
 
           <!-- ランニング・メモリアル -->
-          <div class="col-lg-4 col-md-5 col-sm-8 mb-4">
+          <div class="col-lg-4 col-md-6 col-sm-8 mb-4">
             <div class="card app-card h-100 shadow">
               <img
                 src="res/rm.png"
@@ -107,23 +128,32 @@
                 </div>
               </div>
               <div class="card-footer">
-                <div class="d-flex flex-wrap gap-1 justify-content-start">
+                <div class="d-flex flex-nowrap gap-1 justify-content-start">
                   <a
                     href="https://apps.apple.com/us/app/%E3%83%A9%E3%83%B3%E3%83%8B%E3%83%B3%E3%82%B0-%E3%83%A1%E3%83%A2%E3%83%AA%E3%82%A2%E3%83%AB/id6469449965"
-                    class="btn btn-primary btn-sm"
                     target="_blank"
-                    ><i class="bi bi-apple"></i> App Store</a
-                  >
+                    ><img src="res/app_store.png" alt="App Store"
+                  /></a>
                   <a
                     href="https://play.google.com/store/apps/details?id=com.simgon.runningmemorial"
-                    class="btn btn-outline-primary btn-sm"
                     target="_blank"
-                    ><i class="bi bi-google-play"></i> Google Play</a
-                  >
+                    ><img src="res/google_play.png" alt="Google Play"
+                  /></a>
                   <a
                     href="https://running-memorial.com/"
-                    class="btn btn-outline-secondary btn-sm"
                     target="_blank"
+                    style="
+                      text-decoration: none;
+                      background-color: #333;
+                      color: white;
+                      border: 1px solid #555;
+                      border-radius: 4px;
+                      font-size: 0.75rem;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      height: 40px;
+                    "
                     ><i class="bi bi-globe"></i> 公式サイト</a
                   >
                 </div>
@@ -132,7 +162,7 @@
           </div>
 
           <!-- ポップポップコーン -->
-          <div class="col-lg-4 col-md-5 col-sm-8 mb-4">
+          <div class="col-lg-4 col-md-6 col-sm-8 mb-4">
             <div class="card app-card h-100 shadow">
               <img
                 src="res/poppopcorn.png"
@@ -154,13 +184,14 @@
                 </div>
               </div>
               <div class="card-footer">
-                <div class="d-flex flex-wrap gap-1 justify-content-start">
+                <div class="d-flex flex-nowrap gap-1 justify-content-start">
                   <a
                     href="https://apps.apple.com/us/app/%E3%83%9D%E3%83%83%E3%83%97%E3%83%9D%E3%83%83%E3%83%97%E3%82%B3%E3%83%BC%E3%83%B3/id1579511522"
-                    class="btn btn-primary btn-sm"
                     target="_blank"
-                    ><i class="bi bi-apple"></i> App Store</a
-                  >
+                    ><img src="res/app_store.png" alt="App Store"
+                  /></a>
+                  <div style="flex: 1"></div>
+                  <div style="flex: 1"></div>
                 </div>
               </div>
             </div>
