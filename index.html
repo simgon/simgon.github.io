@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simgonsoft - 制作アプリ一覧</title>
+    <title>Simgonsoft</title>
     <link rel="icon" href="res/site.png" type="image/png" />
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
     <link
@@ -12,7 +12,8 @@
     />
     <style>
       .hero-section {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        /* background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); */
+        background-color: #11998e;
         color: white;
         padding: 30px 0;
       }
@@ -41,10 +42,64 @@
         background-color: #343a40;
         color: white;
       }
+      .timeline {
+        position: relative;
+        padding-left: 30px;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 15px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #dee2e6;
+      }
+      .timeline-item {
+        position: relative;
+        margin-bottom: 20px;
+      }
+      .timeline-marker {
+        position: absolute;
+        left: -21px;
+        top: 7px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: 2px solid white;
+        z-index: 1;
+        background-color: #11998e;
+      }
+      .timeline-content {
+        padding-left: 20px;
+      }
+      .timeline-year {
+        font-weight: bold;
+        color: #fff;
+        /* background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); */
+        background-color: #11998e;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        width: fit-content;
+      }
+      .app-icon {
+        object-fit: cover;
+        width: 120px;
+        height: 120px;
+        background-color: transparent;
+        border-radius: 20px;
+        border: 3px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
     </style>
   </head>
   <body>
-    <!-- ヒーローセクション -->
     <section id="home" class="hero-section">
       <div class="container text-center">
         <h2 class="mb-3">Simgonsoft</h2>
@@ -52,146 +107,188 @@
       </div>
     </section>
 
-    <!-- アプリ紹介セクション -->
+    <!-- アプリ紹介 -->
     <section id="apps" class="py-5">
       <div class="container">
-        <div class="row justify-content-center">
-          <!-- ルートメモ -->
-          <div class="col-lg-4 col-md-6 col-sm-8 mb-4">
-            <div class="card app-card h-100 shadow">
-              <img
-                src="res/routememo.png"
-                class="card-img-top"
-                alt="ルートメモ"
-                style="object-fit: contain; height: 60%; width: 100%; background-color: transparent"
-              />
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <h5 class="card-title mb-0">ルートメモ</h5>
-                  <span class="badge bg-warning">2025年</span>
-                </div>
-                <p class="card-text">
-                  散歩道、ジョギングコース等のルートを地図上に記録・管理できるアプリ。
-                </p>
-                <div class="mb-3">
-                  <span class="badge bg-primary me-1">Swift</span>
-                  <span class="badge bg-secondary me-1">SwiftUI</span>
-                  <span class="badge bg-info">Kotlin</span>
+        <div class="timeline">
+          <!-- 2026年 - 大行列サウナ行進 -->
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div class="timeline-year">2026年</div>
+              <div class="timeline-marker"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="card app-card shadow">
+                <div class="d-flex flex-column flex-md-row align-items-start p-3">
+                  <div class="me-md-3 mb-3 mb-md-0 flex-shrink-0">
+                    <img src="res/sauna.png" class="card-img-top app-icon" alt="大行列サウナ行進" />
+                  </div>
+                  <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <h5 class="card-title mb-0">大行列サウナ行進</h5>
+                    </div>
+                    <div class="card-text mb-1">
+                      サウナ経営シミュレーションゲーム。（タップ放置ゲーム）個性豊かなキャラクターたちをサウナに迎え入れて、ととのえよう！
+                    </div>
+                    <div class="mb-2">
+                      <span class="badge bg-primary me-1">Unity</span>
+                      <span class="badge bg-primary me-1">C#</span>
+                      <span class="badge bg-primary me-1">iOS</span>
+                    </div>
+                    <div class="d-flex flex-nowrap gap-1">
+                      <a
+                        href="https://apps.apple.com/us/app/%E5%A4%A7%E8%A1%8C%E5%88%97%E3%82%B5%E3%82%A6%E3%83%8A%E8%A1%8C%E9%80%B2/id6757921989"
+                        target="_blank"
+                        ><img src="res/app_store.png" alt="App Store" style="height: 30px"
+                      /></a>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="card-footer">
-                <div class="d-flex flex-nowrap gap-1 justify-content-start">
-                  <a
-                    href="https://apps.apple.com/us/app/%E3%83%AB%E3%83%BC%E3%83%88%E3%83%A1%E3%83%A2/id6748929031"
-                    target="_blank"
-                    ><img src="res/app_store.png" alt="App Store"
-                  /></a>
-                  <div
-                    style="
-                      flex: 1;
-                      text-align: center;
-                      display: flex;
-                      justify-content: center;
-                      align-items: center;
-                    "
-                  >
+            </div>
+          </div>
+
+          <!-- 2025年 - ルートメモ -->
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div class="timeline-year">2025年</div>
+              <div class="timeline-marker"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="card app-card shadow">
+                <div class="d-flex flex-column flex-md-row align-items-start p-3">
+                  <div class="me-md-3 mb-3 mb-md-0 flex-shrink-0">
+                    <img src="res/routememo.png" class="card-img-top app-icon" alt="ルートメモ" />
+                  </div>
+                  <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <h5 class="card-title mb-0">ルートメモ</h5>
+                    </div>
+                    <div class="card-text mb-1">
+                      散歩道、ジョギングコース等のルートを地図上に記録・管理できるアプリ。
+                    </div>
+                    <div class="mb-2">
+                      <span class="badge bg-primary me-1">Swift</span>
+                      <span class="badge bg-primary me-1">SwiftUI</span>
+                      <span class="badge bg-primary me-1">Supabase</span>
+                    </div>
+                    <div class="d-flex flex-nowrap gap-1">
+                      <a
+                        href="https://apps.apple.com/us/app/%E3%83%AB%E3%83%BC%E3%83%88%E3%83%A1%E3%83%A2/id6748929031"
+                        target="_blank"
+                        ><img src="res/app_store.png" alt="App Store" style="height: 30px"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2023年 - ランニング・メモリアル -->
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div class="timeline-year">2023年</div>
+              <div class="timeline-marker"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="card app-card shadow">
+                <div class="d-flex flex-column flex-md-row align-items-start p-3">
+                  <div class="me-md-3 mb-3 mb-md-0 flex-shrink-0">
                     <img
-                      src="res/google_play.png"
-                      alt="Google Play 準備中"
-                      style="opacity: 0.5; height: 40px; max-width: 100%; object-fit: contain"
+                      src="res/rm.png"
+                      class="card-img-top app-icon"
+                      alt="ランニング・メモリアル"
                     />
                   </div>
-                  <div style="flex: 1"></div>
+                  <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <h5 class="card-title mb-0">ランニング・メモリアル</h5>
+                    </div>
+                    <div class="card-text mb-1">
+                      ランニングの記録と思い出をルート保存できるアプリ。
+                    </div>
+                    <div class="mb-2">
+                      <span class="badge bg-primary me-1">Ruby</span>
+                      <span class="badge bg-primary me-1">Ruby on Rails</span>
+                      <span class="badge bg-primary me-1">JavaScript</span>
+                    </div>
+                    <div class="d-flex flex-nowrap gap-1">
+                      <a
+                        href="https://apps.apple.com/us/app/%E3%83%A9%E3%83%B3%E3%83%8B%E3%83%B3%E3%82%B0-%E3%83%A1%E3%83%A2%E3%83%AA%E3%82%A2%E3%83%AB/id6469449965"
+                        target="_blank"
+                        ><img src="res/app_store.png" alt="App Store" style="height: 30px"
+                      /></a>
+                      <a
+                        href="https://play.google.com/store/apps/details?id=com.simgon.runningmemorial"
+                        target="_blank"
+                      >
+                        <img
+                          src="res/google_play.png"
+                          alt="Google Play"
+                          style="height: 30px; opacity: 0.5"
+                        />
+                      </a>
+                      <a
+                        href="https://running-memorial.com/"
+                        target="_blank"
+                        style="
+                          text-decoration: none;
+                          background-color: #333;
+                          color: white;
+                          border: 1px solid #555;
+                          border-radius: 4px;
+                          font-size: 0.75rem;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          width: 75px;
+                          height: 30px;
+                          padding: 0 8px;
+                          white-space: nowrap;
+                        "
+                        ><i class="bi bi-globe" style="margin-right: 4px"></i>公式</a
+                      >
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- ランニング・メモリアル -->
-          <div class="col-lg-4 col-md-6 col-sm-8 mb-4">
-            <div class="card app-card h-100 shadow">
-              <img
-                src="res/rm.png"
-                class="card-img-top"
-                alt="ランニング・メモリアル"
-                style="object-fit: contain; height: 60%; width: 100%; background-color: transparent"
-              />
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <h5 class="card-title mb-0">ランニング・メモリアル</h5>
-                  <span class="badge bg-success">2023年</span>
-                </div>
-                <p class="card-text">ランニングの記録と思い出をルート保存できるアプリ。</p>
-                <div class="mb-3">
-                  <span class="badge bg-primary me-1">Ruby</span>
-                  <span class="badge bg-secondary me-1">JavaScript</span>
-                </div>
-              </div>
-              <div class="card-footer">
-                <div class="d-flex flex-nowrap gap-1 justify-content-start">
-                  <a
-                    href="https://apps.apple.com/us/app/%E3%83%A9%E3%83%B3%E3%83%8B%E3%83%B3%E3%82%B0-%E3%83%A1%E3%83%A2%E3%83%AA%E3%82%A2%E3%83%AB/id6469449965"
-                    target="_blank"
-                    ><img src="res/app_store.png" alt="App Store"
-                  /></a>
-                  <a
-                    href="https://play.google.com/store/apps/details?id=com.simgon.runningmemorial"
-                    target="_blank"
-                    ><img src="res/google_play.png" alt="Google Play"
-                  /></a>
-                  <a
-                    href="https://running-memorial.com/"
-                    target="_blank"
-                    style="
-                      text-decoration: none;
-                      background-color: #333;
-                      color: white;
-                      border: 1px solid #555;
-                      border-radius: 4px;
-                      font-size: 0.75rem;
-                      display: flex;
-                      align-items: center;
-                      justify-content: center;
-                      height: 40px;
-                    "
-                    ><i class="bi bi-globe"></i> 公式サイト</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ポップポップコーン -->
-          <div class="col-lg-4 col-md-6 col-sm-8 mb-4">
-            <div class="card app-card h-100 shadow">
-              <img
-                src="res/poppopcorn.png"
-                class="card-img-top"
-                alt="ポップポップコーン"
-                style="object-fit: contain; height: 60%; width: 100%; background-color: transparent"
-              />
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <h5 class="card-title mb-0">ポップポップコーン</h5>
-                  <span class="badge bg-info">2021年</span>
-                </div>
-                <p class="card-text">
-                  ポップコーンを弾けさせるシンプルで楽しいゲームアプリ。タップでポップコーンを弾けさせて高スコアを目指そう！
-                </p>
-                <div class="mb-3">
-                  <span class="badge bg-primary me-1">Swift</span>
-                  <span class="badge bg-secondary me-1">SpriteKit</span>
-                </div>
-              </div>
-              <div class="card-footer">
-                <div class="d-flex flex-nowrap gap-1 justify-content-start">
-                  <a
-                    href="https://apps.apple.com/us/app/%E3%83%9D%E3%83%83%E3%83%97%E3%83%9D%E3%83%83%E3%83%97%E3%82%B3%E3%83%BC%E3%83%B3/id1579511522"
-                    target="_blank"
-                    ><img src="res/app_store.png" alt="App Store"
-                  /></a>
-                  <div style="flex: 1"></div>
-                  <div style="flex: 1"></div>
+          <!-- 2021年 - ポップポップコーン -->
+          <div class="timeline-item">
+            <div class="timeline-year">2021年</div>
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="card app-card shadow">
+                <div class="d-flex flex-column flex-md-row align-items-start p-3">
+                  <div class="me-md-3 mb-3 mb-md-0 flex-shrink-0">
+                    <img
+                      src="res/poppopcorn.png"
+                      class="card-img-top app-icon"
+                      alt="ポップポップコーン"
+                    />
+                  </div>
+                  <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <h5 class="card-title mb-0">ポップポップコーン</h5>
+                    </div>
+                    <div class="card-text mb-1">
+                      ポップコーンを弾けさせるシンプルで楽しいゲームアプリ。タップでポップコーンを弾けさせて高スコアを目指そう！
+                    </div>
+                    <div class="mb-2">
+                      <span class="badge bg-primary me-1">Swift</span>
+                      <span class="badge bg-primary me-1">SpriteKit</span>
+                    </div>
+                    <div class="d-flex flex-nowrap gap-1">
+                      <a
+                        href="https://apps.apple.com/us/app/%E3%83%9D%E3%83%83%E3%83%97%E3%83%9D%E3%83%83%E3%83%97%E3%82%B3%E3%83%BC%E3%83%B3/id1579511522"
+                        target="_blank"
+                        ><img src="res/app_store.png" alt="App Store" style="height: 30px"
+                      /></a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -200,7 +297,7 @@
       </div>
     </section>
 
-    <!-- お問い合わせセクション -->
+    <!-- お問い合わせ -->
     <section id="contact" class="py-5 bg-light">
       <div class="container">
         <div class="row justify-content-center">
@@ -210,18 +307,24 @@
               <div class="col-md-6 mb-3">
                 <div class="card">
                   <div class="card-body">
-                    <h5 class="card-title">Email</h5>
-                    <p class="card-text">procar1000@yahoo.co.jp</p>
+                    <h5 class="card-title"><i class="bi bi-envelope me-2"></i>Email</h5>
+                    <p class="card-text">simgonsoft@gmail.com</p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 mb-3">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">GitHub</h5>
-                    <p class="card-text">https://github.com/simgon</p>
+                <a
+                  href="https://github.com/simgon"
+                  target="_blank"
+                  class="text-decoration-none text-dark"
+                >
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title"><i class="bi bi-github me-2"></i>GitHub</h5>
+                      <p class="card-text">https://github.com/simgon</p>
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -232,7 +335,7 @@
     <!-- フッター -->
     <footer class="footer py-4">
       <div class="container text-center">
-        <p>&copy; 2025 Portfolio. All rights reserved.</p>
+        <p>&copy; 2026 All rights reserved.</p>
       </div>
     </footer>
 
