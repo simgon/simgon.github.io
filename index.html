@@ -12,7 +12,6 @@
     />
     <style>
       .hero-section {
-        /* background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); */
         background-color: #11998e;
         color: white;
         padding: 30px 0;
@@ -76,13 +75,11 @@
       .timeline-year {
         font-weight: bold;
         color: #fff;
-        /* background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); */
         background-color: #11998e;
         padding: 4px 12px;
         border-radius: 20px;
         font-size: 0.9rem;
         white-space: nowrap;
-        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
         margin-bottom: 10px;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -97,6 +94,21 @@
         border: 3px solid rgba(255, 255, 255, 0.8);
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       }
+      .official-link {
+        text-decoration: none;
+        background-color: #333;
+        color: white;
+        border: 1px solid #555;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 75px;
+        height: 30px;
+        padding: 0 8px;
+        white-space: nowrap;
+      }
     </style>
   </head>
   <body>
@@ -107,7 +119,7 @@
       </div>
     </section>
 
-    <!-- アプリ紹介 -->
+    <!-- 制作アプリ一覧 -->
     <section id="apps" class="py-5">
       <div class="container">
         <div class="timeline">
@@ -139,8 +151,9 @@
                       <a
                         href="https://apps.apple.com/us/app/%E5%A4%A7%E8%A1%8C%E5%88%97%E3%82%B5%E3%82%A6%E3%83%8A%E8%A1%8C%E9%80%B2/id6757921989"
                         target="_blank"
-                        ><img src="res/app_store.png" alt="App Store" style="height: 30px"
-                      /></a>
+                      >
+                        <img src="res/app_store.png" alt="App Store" style="height: 30px" />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -176,8 +189,9 @@
                       <a
                         href="https://apps.apple.com/us/app/%E3%83%AB%E3%83%BC%E3%83%88%E3%83%A1%E3%83%A2/id6748929031"
                         target="_blank"
-                        ><img src="res/app_store.png" alt="App Store" style="height: 30px"
-                      /></a>
+                      >
+                        <img src="res/app_store.png" alt="App Store" style="height: 30px" />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -217,8 +231,9 @@
                       <a
                         href="https://apps.apple.com/us/app/%E3%83%A9%E3%83%B3%E3%83%8B%E3%83%B3%E3%82%B0-%E3%83%A1%E3%83%A2%E3%83%AA%E3%82%A2%E3%83%AB/id6469449965"
                         target="_blank"
-                        ><img src="res/app_store.png" alt="App Store" style="height: 30px"
-                      /></a>
+                      >
+                        <img src="res/app_store.png" alt="App Store" style="height: 30px" />
+                      </a>
                       <a
                         href="https://play.google.com/store/apps/details?id=com.simgon.runningmemorial"
                         target="_blank"
@@ -229,26 +244,9 @@
                           style="height: 30px; opacity: 0.5"
                         />
                       </a>
-                      <a
-                        href="https://running-memorial.com/"
-                        target="_blank"
-                        style="
-                          text-decoration: none;
-                          background-color: #333;
-                          color: white;
-                          border: 1px solid #555;
-                          border-radius: 4px;
-                          font-size: 0.75rem;
-                          display: flex;
-                          align-items: center;
-                          justify-content: center;
-                          width: 75px;
-                          height: 30px;
-                          padding: 0 8px;
-                          white-space: nowrap;
-                        "
-                        ><i class="bi bi-globe" style="margin-right: 4px"></i>公式</a
-                      >
+                      <a href="https://running-memorial.com/" target="_blank" class="official-link">
+                        <i class="bi bi-globe" style="margin-right: 4px"></i>公式
+                      </a>
                     </div>
                   </div>
                 </div>
